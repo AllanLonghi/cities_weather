@@ -1,12 +1,12 @@
 import React from 'react'
-import CitiesList from './Components/CitiesList/CitiesList'
+import CityBox from './Components/City/CityBox'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <CitiesList/>
+        <CityBox/>
       </header>
     </div>
   );

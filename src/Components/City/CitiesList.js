@@ -8,7 +8,7 @@ export default class CitiesList extends React.Component{
     }
     
     componentWillMount() {
-        this.setState({cities:[{id:"1",city:"Curitibanos",uf:'SC',country:'Brasil'}]});
+        this.setState({cities:[{id:"1",city:"Curitibanos",country:'Brasil'},{id:"1",city:"Curitibanos",country:'Brasil'}]});
     }
     
     render(){
@@ -18,7 +18,6 @@ export default class CitiesList extends React.Component{
                 <thead>
                     <tr>
                     <th>Cidade</th>
-                    <th>Estado</th>
                     <th>Pais</th>
                     </tr>
                 </thead>
@@ -28,7 +27,6 @@ export default class CitiesList extends React.Component{
                         return (
                             <tr key={city.id}>
                             <td>{city.city}</td>
-                            <td>{city.uf}</td>
                             <td>{city.country}</td>
                             </tr>
                             );
