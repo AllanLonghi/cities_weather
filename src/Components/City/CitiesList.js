@@ -1,16 +1,13 @@
 import React from 'react';
 import './CitiesList.css';
+import WeatherModal from '../Weather/WeatherModal'
 
 export default class CitiesList extends React.Component{
     constructor(){
         super();
-        this.state = {cities:[]};
+        this.state = {ModalVisible:false};
     }
-    
-    componentWillMount() {
-        this.setState({cities:[{id:"1",city:"Curitibanos",country:'Brasil'},{id:"1",city:"Curitibanos",country:'Brasil'}]});
-    }
-    
+
     render(){
         return(
             <div>
@@ -18,22 +15,23 @@ export default class CitiesList extends React.Component{
                 <thead>
                     <tr>
                     <th>Cidade</th>
-                    <th>Pais</th>
+                    <th>Código do Pais</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        this.state.cities.map(function(city){
+                        this.props.cities.map(function(city){
                         return (
-                            <tr key={city.id}>
-                            <td>{city.city}</td>
-                            <td>{city.country}</td>
+                            <tr key={city.Id} onClick={() => this.setState({ModalVisible:true})}>
+                            <td>{city.Name}</td>
+                            <td>{city.CountryCode}</td>
                             </tr>
                             );
                         })
                     }
                 </tbody>
                 </table>
+                <WeatherModal show={this.state.ModalVisible} onHide={() => this.setState({ModalVisible:true})}/>
             </div>
         );
     }
