@@ -12,11 +12,9 @@ namespace CityWeatherService.Models
         public int Id { get; set; }
 
         [Required]
-        [Index("IX_CityCountryCode", 1, IsUnique = true)]
         public String Name { get; set; }
 
         [Required]
-        [Index("IX_CityCountryCode", 2, IsUnique = true)]
         public String CountryCode { get; set; }
     }
 }

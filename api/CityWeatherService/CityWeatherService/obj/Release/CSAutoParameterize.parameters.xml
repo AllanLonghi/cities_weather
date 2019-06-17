@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="CityWeatherServiceContext-Web.config Connection String" description="CityWeatherServiceContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=CityWeatherServiceContext-20190615140639; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|CityWeatherServiceContext-20190615140639.mdf" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Allan\\Documents\\Allan\\teste_HBSIS\\cities_weather\\api\\CityWeatherService\\CityWeatherService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CityWeatherServiceContext']/@connectionString" />
-  </parameter>
-  <parameter name="CityWeatherServiceContext_DatabasePublish-Web.config Connection String" description="CityWeatherServiceContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="CityWeatherServiceContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Allan\\Documents\\Allan\\teste_HBSIS\\cities_weather\\api\\CityWeatherService\\CityWeatherService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CityWeatherServiceContext_DatabasePublish']/@connectionString" />
-  </parameter>
-</parameters>

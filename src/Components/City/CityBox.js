@@ -1,6 +1,7 @@
 import React from 'react';
 import CitiesList from './CitiesList';
 import CityForm from './CityForm';
+import './CityBox.css';
 import {GetCitiesDelegateResult} from '../../ApiConn/CityApi';
 
 export default class CityBox extends React.Component{

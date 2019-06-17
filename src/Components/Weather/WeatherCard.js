@@ -1,7 +1,7 @@
 import React from 'react';
 import {GetWeatherDelegateResult} from '../../ApiConn/WeatherApiConn';
 import './WeatherCards.css';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 class WeatherModal extends React.Component{
     constructor(props){
@@ -15,6 +15,7 @@ class WeatherModal extends React.Component{
     componentDidMount(){
       GetWeatherDelegateResult(this.props.location.state,this.callBackSuccess,this.callBackFail);
     }
+    
     callBackSuccess(result){
       this.setState({weather:this.GetWeatherPerDay(result)})
     }
@@ -27,9 +28,13 @@ class WeatherModal extends React.Component{
     FormatDate(date){
       var data= new Date(date)
       var dia=data.getDate();
-      var mes=data.getMonth();
+      var mes=data.getMonth() + 1;
       var ano=data.getFullYear();
-      return  dia + '/' + (mes++) + '/' + ano;
+      if(mes < '10'){
+        mes = '0' + mes; 
+      }
+      console.log(mes);
+      return  dia + '/' + mes + '/' + ano;
     }
 
     GetWeatherPerDay(weather){
@@ -75,7 +80,11 @@ class WeatherModal extends React.Component{
           </div>
         );
     }else{
-      return(<div><span className="cityName">Não foi possível carregar dados: {this.Error.message}</span></div>);
+      if(!this.Error.message){
+        return(<div><span className="cityName">Carregando dados</span></div>);
+      }else{
+        return(<div><span className="cityName">Não foi possível carregar dados: {this.Error.message}</span></div>);
+      }
     }
   }
 }

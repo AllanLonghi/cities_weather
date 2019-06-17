@@ -19,7 +19,7 @@ namespace CityWeatherService.Controllers
         private CityWeatherServiceContext db = new CityWeatherServiceContext();
 
         // GET: api/Cities
-        public IQueryable<City> GetCities()
+        public IEnumerable<City> GetCities()
         {
             return db.Cities;
         }
@@ -31,6 +31,11 @@ namespace CityWeatherService.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+            }
+
+            if (db.Cities.Any(c => c.Name == city.Name && c.CountryCode == city.CountryCode))
+            {
+                return BadRequest("Cidade já cadastrada.");
             }
 
             db.Cities.Add(city);
