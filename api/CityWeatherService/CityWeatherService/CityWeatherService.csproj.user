@@ -19,7 +19,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>CityWeatherService.Models.CityWeatherServiceContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>True</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>FolderProfile10</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>FolderProfile11</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
