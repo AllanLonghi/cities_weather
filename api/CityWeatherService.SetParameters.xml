@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="CityWeatherAPI" />
+  <setParameter name="CityWeatherServiceContext-Web.config Connection String" value="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=CityWeatherServiceContext-20190615140639; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|CityWeatherServiceContext-20190615140639.mdf" />
+  <setParameter name="CityWeatherServiceContext_DatabasePublish-Web.config Connection String" value="CityWeatherServiceContext_DatabasePublish.ConnetionString" />
+</parameters>

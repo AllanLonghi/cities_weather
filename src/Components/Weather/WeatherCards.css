@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
+* {
+	box-sizing: border-box;
+	text-align: center;
+  }
+  
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.cityName{
+	color: black;
+}
+  /* Float four columns side by side */
+  .column {
+	float: left;
+	width: 15%;
+	padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {
+	  margin: 0 -5px;
+	  float: inline-end; 
+	  display:         flex;
+	  flex-wrap:       wrap;
+	  justify-content: center;
+	}
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+	.column {
+	  width: 100%;
+	  display: block;
+	  margin-bottom: 20px;
+	}
+  }
+  
+  /* Style the counter cards */
+  .card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #5c5656;
+  }
+
+.temp_max{
+	font-size: 20px;
+	text-align: center;
+	display: block;
+	font-weight: 300;
+	color: rgb(48, 2, 2);
+	padding: 2px 0 0;
+}
+
+.temp_min{
+	font-size: 20px;
+	text-align: center;
+	display: block;
+	color: rgb(7, 3, 51);
+	padding: 2px 0 0;
+}
+
+.date{
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-transform: uppercase;
+    font-size: 25px;
+    padding: 5px;
+	display: block;
+}
+.conditions{ 
+	font-size: 15px;
+	display: block;
+	text-align: center;
+	color: azure;
+}
+.wind {
+	font-size: 15px;
+}

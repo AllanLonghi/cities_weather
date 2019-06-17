@@ -24,54 +24,6 @@ namespace CityWeatherService.Controllers
             return db.Cities;
         }
 
-        // GET: api/Cities/5
-        [ResponseType(typeof(City))]
-        public async Task<IHttpActionResult> GetCity(int id)
-        {
-            City city = await db.Cities.FindAsync(id);
-            if (city == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(city);
-        }
-
-        // PUT: api/Cities/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutCity(int id, City city)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != city.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(city).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CityExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
         // POST: api/Cities
         [ResponseType(typeof(City))]
         public async Task<IHttpActionResult> PostCity(City city)
@@ -85,22 +37,6 @@ namespace CityWeatherService.Controllers
             await db.SaveChangesAsync();
 
             return Ok(db.Cities);
-        }
-
-        // DELETE: api/Cities/5
-        [ResponseType(typeof(City))]
-        public async Task<IHttpActionResult> DeleteCity(int id)
-        {
-            City city = await db.Cities.FindAsync(id);
-            if (city == null)
-            {
-                return NotFound();
-            }
-
-            db.Cities.Remove(city);
-            await db.SaveChangesAsync();
-
-            return Ok(city);
         }
 
         protected override void Dispose(bool disposing)

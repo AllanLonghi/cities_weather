@@ -1,13 +1,13 @@
 import $ from 'jquery'
 
-var appid = 'b6907d289e10d714a6e88b30761fae22';
+var appid = 'cb5ee795dd586d31a90c93f8fcfd8f56';
 
 export function GetWeatherDelegateResult(city,callBackSuccess,callBackFail){
     $.ajax({
-        url: "https://openweathermap.org/data/2.5/forecast",
+        url: "https://api.openweathermap.org/data/2.5/forecast",
         method: 'GET',
         dataType: 'json',
-        data: {q:city.Name + ',' + city.CountryCode,appid:appid},
+        data: {q:city.Name + ',' + city.CountryCode,units:'metric',appid:appid},
         success: function(result){
             callBackSuccess(result);
         },
@@ -19,10 +19,10 @@ export function GetWeatherDelegateResult(city,callBackSuccess,callBackFail){
 
 export function GetWeather(city){
     $.ajax({
-        url: "https://openweathermap.org/data/2.5/forecast",
+        url: "https://api.openweathermap.org/data/2.5/forecast",
         method: 'GET',
         dataType: 'json',
-        data: {q:city.Name + ',' + city.CountryCode,appid:appid},
+        data: {q:city.Name + ',' + city.CountryCode,cnt:5,units:'metric',appid:appid},
         success: function(result){   
             return result;
         }
