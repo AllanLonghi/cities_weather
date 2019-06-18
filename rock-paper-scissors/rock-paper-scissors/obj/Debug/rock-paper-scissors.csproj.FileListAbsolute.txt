@@ -1,0 +1,7 @@
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\bin\Debug\rock-paper-scissors.exe.config
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\bin\Debug\rock-paper-scissors.exe
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\bin\Debug\rock-paper-scissors.pdb
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\obj\Debug\rock-paper-scissors.csprojAssemblyReference.cache
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\obj\Debug\rock-paper-scissors.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\obj\Debug\rock-paper-scissors.exe
+C:\Users\Allan\Documents\Visual Studio 2017\Projects\rock-paper-scissors\rock-paper-scissors\obj\Debug\rock-paper-scissors.pdb
