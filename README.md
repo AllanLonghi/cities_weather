@@ -6,21 +6,21 @@ Aplicação WEB que permite cadastrar cidade e exibir a previsão do tempo.
 
 - Instalar nodejs na máquina que irá rodar as aplicações. Pode ser feito o download em: [NodeJs](https://nodejs.org/en/download/)
 
-- Instalar o pacote serve com o comando: `npm install -g serve`.
+- Instalar o pacote **serve** com o comando: `npm install -g serve`.
 
 - Ter recursos para o IIS (Internet Information Services) adicionados.
 
 # **Estrutura de pastas**
 
-**WebApp:**
+ - **WebApp:**
 
 	- Pasta **api** contêm duas sub-pastas: **CityWeatherService** possui os fontes para a API backend em C#. **Publish** possui a publicação da API em C#.
 
-	- **build** contêm os arquivos bildados da aplicação reactjs.
+	- **build** contêm os arquivos buildados da aplicação reactjs.
 
 	- **src** possui os fontes da aplicação reactjs.
 
-**rock-paper-scissors:**
+ - **rock-paper-scissors:**
 
 	- Teste de lógica proposto.
 
